@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/shinigami/ontologies/2024/9/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/shinigami/ontologies/2024/9/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vinhos="http://www.semanticweb.org/vinhos#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vinhos"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#combinaBemCom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vinhos#combinaBemCom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Comida"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#harmonizaCom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vinhos#harmonizaCom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vinhos#Comida"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#temCaracteristica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vinhos#temCaracteristica">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vinhos#CaracteristicaVinho"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#anoSafra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vinhos#anoSafra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#paisOrigem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vinhos#paisOrigem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#preço -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vinhos#preço">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#temperatura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vinhos#temperatura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#teorAlcoolico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vinhos#teorAlcoolico">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Acidez -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Acidez">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#CaracteristicaVinho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#AcidezAlta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#AcidezAlta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Acidez"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#AcidezBaixa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#AcidezBaixa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Acidez"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#AcidezMedia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#AcidezMedia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Acidez"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CaracteristicaVinho -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#CaracteristicaVinho"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Carne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Carne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Comida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CarneVermelha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#CarneVermelha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Carne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CarnesBrancas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#CarnesBrancas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Carne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Comida -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Comida"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Corpo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Corpo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#CaracteristicaVinho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CorpoEncorpado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#CorpoEncorpado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Corpo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CorpoLeve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#CorpoLeve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Corpo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CorpoMedio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#CorpoMedio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Corpo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Massa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Massa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Comida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Pescados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Pescados">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Carne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Queijo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Queijo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Comida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Sobremesa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Sobremesa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Comida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Tanino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Tanino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#CaracteristicaVinho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#TaninoAlto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#TaninoAlto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Tanino"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#TaninoBaixo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#TaninoBaixo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Tanino"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#TaninoMedio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#TaninoMedio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Tanino"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Vinho -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#Vinho"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#VinhoBranco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#VinhoBranco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#VinhoRose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#VinhoRose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#VinhoTinto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vinhos#VinhoTinto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vinhos#Vinho"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CabernetSauvignon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#CabernetSauvignon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#VinhoTinto"/>
+        <vinhos:harmonizaCom rdf:resource="http://www.semanticweb.org/vinhos#FileMignon"/>
+        <vinhos:temCaracteristica rdf:resource="http://www.semanticweb.org/vinhos#CorpoForte"/>
+        <vinhos:paisOrigem>França</vinhos:paisOrigem>
+        <vinhos:teorAlcoolico rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.5</vinhos:teorAlcoolico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Chardonnay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#Chardonnay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#VinhoBranco"/>
+        <vinhos:temCaracteristica rdf:resource="http://www.semanticweb.org/vinhos#CorpoMedio"/>
+        <vinhos:paisOrigem>França</vinhos:paisOrigem>
+        <vinhos:teorAlcoolico rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</vinhos:teorAlcoolico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CorpoForte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#CorpoForte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#CorpoEncorpado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CorpoLeve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#CorpoLeve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#CorpoLeve"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#CorpoMedio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#CorpoMedio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#CorpoMedio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#FileMignon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#FileMignon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#CarneVermelha"/>
+        <vinhos:combinaBemCom rdf:resource="http://www.semanticweb.org/vinhos#CabernetSauvignon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#FrangoGrelhado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#FrangoGrelhado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#CarnesBrancas"/>
+        <vinhos:combinaBemCom rdf:resource="http://www.semanticweb.org/vinhos#Chardonnay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#Malbec -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#Malbec">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#VinhoTinto"/>
+        <vinhos:temCaracteristica rdf:resource="http://www.semanticweb.org/vinhos#CorpoMedio"/>
+        <vinhos:paisOrigem>Argentina</vinhos:paisOrigem>
+        <vinhos:teorAlcoolico rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.0</vinhos:teorAlcoolico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#PeixeBranco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#PeixeBranco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#Pescados"/>
+        <vinhos:combinaBemCom rdf:resource="http://www.semanticweb.org/vinhos#SauvignonBlanc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vinhos#SauvignonBlanc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vinhos#SauvignonBlanc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vinhos#VinhoBranco"/>
+        <vinhos:temCaracteristica rdf:resource="http://www.semanticweb.org/vinhos#CorpoLeve"/>
+        <vinhos:paisOrigem>Nova Zelândia</vinhos:paisOrigem>
+        <vinhos:teorAlcoolico rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</vinhos:teorAlcoolico>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
