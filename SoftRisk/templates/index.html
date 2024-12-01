@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Risco</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-10">
+        <h1 class="text-3xl font-bold text-center mb-5">Simulação de Risco de Projeto</h1>
+        <p class="text-center text-gray-600 mb-8">
+            Preencha os campos abaixo com os valores desejados. Os intervalos e valores padrão estão informados para cada variável.
+        </p>
+        <form method="POST" action="/" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Variáveis com intervalos e valores padrão -->
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="experiencia">
+                        Experiência da Equipe (anos) [1 - 10]
+                    </label>
+                    <input
+                        type="number"
+                        id="experiencia"
+                        name="experiencia"
+                        value="5"
+                        min="1"
+                        max="10"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="entrosamento">
+                        Nível de Entrosamento (0 - 10)
+                    </label>
+                    <input
+                        type="number"
+                        id="entrosamento"
+                        name="entrosamento"
+                        value="7"
+                        min="0"
+                        max="10"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="rotatividade">
+                        Rotatividade da Equipe (%) [0 - 100]
+                    </label>
+                    <input
+                        type="number"
+                        id="rotatividade"
+                        name="rotatividade"
+                        value="30"
+                        min="0"
+                        max="100"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="complexidade">
+                        Complexidade Técnica (0 - 10)
+                    </label>
+                    <input
+                        type="number"
+                        id="complexidade"
+                        name="complexidade"
+                        value="8"
+                        min="0"
+                        max="10"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="definicao_requisitos">
+                        Definição dos Requisitos (0 - 10)
+                    </label>
+                    <input
+                        type="number"
+                        id="definicao_requisitos"
+                        name="definicao_requisitos"
+                        value="6"
+                        min="0"
+                        max="10"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="mudancas_requisitos">
+                        Mudanças nos Requisitos (%) [0 - 100]
+                    </label>
+                    <input
+                        type="number"
+                        id="mudancas_requisitos"
+                        name="mudancas_requisitos"
+                        value="40"
+                        min="0"
+                        max="100"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="tamanho">
+                        Tamanho do Projeto (pontos de função) [0 - 100]
+                    </label>
+                    <input
+                        type="number"
+                        id="tamanho"
+                        name="tamanho"
+                        value="50"
+                        min="0"
+                        max="100"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="prazo">
+                        Prazo (meses) [1 - 36]
+                    </label>
+                    <input
+                        type="number"
+                        id="prazo"
+                        name="prazo"
+                        value="12"
+                        min="1"
+                        max="36"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="comunicacao">
+                        Qualidade da Comunicação (0 - 10)
+                    </label>
+                    <input
+                        type="number"
+                        id="comunicacao"
+                        name="comunicacao"
+                        value="8"
+                        min="0"
+                        max="10"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="maturidade">
+                        Maturidade das Ferramentas (0 - 10)
+                    </label>
+                    <input
+                        type="number"
+                        id="maturidade"
+                        name="maturidade"
+                        value="6"
+                        min="0"
+                        max="10"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="impacto_externo">
+                        Impacto do Ambiente Externo (0 - 10)
+                    </label>
+                    <input
+                        type="number"
+                        id="impacto_externo"
+                        name="impacto_externo"
+                        value="3"
+                        min="0"
+                        max="10"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2" for="orcamento">
+                        Orçamento Disponível (USD) [5000 - 500000]
+                    </label>
+                    <input
+                        type="number"
+                        id="orcamento"
+                        name="orcamento"
+                        value="150000"
+                        min="5000"
+                        max="500000"
+                        required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                </div>
+            </div>
+            <div class="flex items-center justify-center mt-5">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit"
+                >
+                    Simular
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
