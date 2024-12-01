@@ -12,6 +12,11 @@ As regras fuzzy e as variáveis foram modeladas utilizando o ChatGPT-4, que dese
 
 ---
 
+![](./data/Screenshot%202024-11-30%20232253.png)
+
+
+![](./data/Screenshot%202024-11-30%20232343.png)
+
 ## 🚀 Funcionalidades
 
 - **Avaliação fuzzy de riscos**: Análise baseada em 12 variáveis principais e suas relações.
