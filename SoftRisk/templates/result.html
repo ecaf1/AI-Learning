@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Simulação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-10">
+        <h1 class="text-3xl font-bold text-center mb-5">Resultado da Simulação</h1>
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <p class="text-xl text-center">
+                O nível de risco calculado para o projeto é:
+            </p>
+            <p class="text-5xl font-bold text-center text-red-500 mt-4">
+                {{ nivel_de_risco }}%
+            </p>
+            <div class="mt-6">
+                <h2 class="text-2xl font-bold text-center mb-4">Gráfico de Resultados</h2>
+                <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico do Resultado" class="mx-auto">
+            </div>
+            <div class="flex items-center justify-center mt-5">
+                <a
+                    href="/"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                    Nova Simulação
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
